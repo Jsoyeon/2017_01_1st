@@ -1,0 +1,112 @@
+#include<stdio.h>
+#include<stdlib.h>
+#pragma warning (disable:4996)
+/*
+#define MAX_LIST_SIZE 100
+
+typedef int element;
+typedef struct{
+	element list[MAX_LIST_SIZE];
+	int length;
+}ArrayListType;
+
+void error(char *message)
+{
+	fprintf(stderr, "%s\n", message);
+	exit(1);
+}
+
+void init(ArrayListType *L)
+{
+L->length = 0;
+}
+
+int is_empty(ArrayListType *L)
+{
+	return L->length == 0;
+}
+
+int is_full(ArrayListType *L)
+{
+	return L->length == MAX_LIST_SIZE;
+}
+
+void display(ArrayListType *L)
+{
+	int i;
+	for(i=0;i<L->length;i++)
+		printf("%d\n", L->list[i]);
+}
+*/
+
+typedef int element;
+typedef struct ListNode{
+	element data;
+	struct ListNode *link;
+}ListNode;
+
+void error(char *message)		//오류 처리 함수
+{
+	fprintf(stderr, "%s\n", message);
+	exit(1);
+}
+
+void insert_node(ListNode **phead, ListNode *p, ListNode *new_node)
+{
+	if (*phead == NULL)
+	{	
+		new_node->link = NULL;
+		*phead = new_node;
+	}
+	else if (p == NULL)
+	{ 
+		new_node->link = *phead;
+		*phead = new_node;
+	}
+	else
+	{	
+		new_node->link = p->link;
+		p->link = new_node;
+	}
+}
+
+void remove_node(ListNode **phead, ListNode *p, ListNode *removed)
+{
+	if (p == NULL)
+		*phead = (*phead)->link;
+	else
+		p->link = removed->link;
+		free(removed);
+}
+
+ListNode *search(ListNode *head, int x)
+{
+
+}
+
+ListNode *concat(ListNode *head1, ListNode *2)
+{
+
+}
+
+ListNode *reverse(ListNode *head)
+{
+
+}
+
+ListNode *create_node(element data, ListNode *link)
+{
+	ListNode *new_node;
+	new_node = (ListNode *)malloc(sizeof(ListNode));
+	if(new_node == NULL) error("메모리 할당 에러");
+	new_node->data = data;
+	new_node->link = link;
+	return(new_node);
+}
+
+
+main()
+{
+	ListNode *list1=NULL, *list2=NULL;
+
+}

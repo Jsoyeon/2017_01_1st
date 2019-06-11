@@ -1,0 +1,22 @@
+﻿빌드 시작: 2017-05-30 오후 2:49:26
+     1>2 노드의 "J:\객체\수업\0530\2170530_C++\20170530\20170530.vcxproj" 프로젝트(build 대상)입니다.
+     1>InitializeBuildStatus:
+         "Debug\20170530.unsuccessfulbuild"에 연결(touching)하고 있습니다.
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt JSY_0530.cpp
+         JSY_0530.cpp
+     1>j:\객체\수업\0530\2170530_c++\20170530\jsy_0530.cpp(246): error C2259: 'Student1' : 추상 클래스를 인스턴스화할 수 없습니다.
+                 다음 멤버가 원인입니다.
+                 'void School::SignSub(std::string)' : abstract입니다.
+                 j:\객체\수업\0530\2170530_c++\20170530\jsy_0530.cpp(224) : 'School::SignSub' 선언을 참조하십시오.
+                 'void School::ShowMe(void)' : abstract입니다.
+                 j:\객체\수업\0530\2170530_c++\20170530\jsy_0530.cpp(225) : 'School::ShowMe' 선언을 참조하십시오.
+     1>j:\객체\수업\0530\2170530_c++\20170530\jsy_0530.cpp(249): error C2259: 'Student2' : 추상 클래스를 인스턴스화할 수 없습니다.
+                 다음 멤버가 원인입니다.
+                 'void School::ShowMe(void)' : abstract입니다.
+                 j:\객체\수업\0530\2170530_c++\20170530\jsy_0530.cpp(225) : 'School::ShowMe' 선언을 참조하십시오.
+     1>"J:\객체\수업\0530\2170530_C++\20170530\20170530.vcxproj" 프로젝트를 빌드했습니다(build 대상). - 실패
+
+빌드하지 못했습니다.
+
+경과 시간: 00:00:00.71

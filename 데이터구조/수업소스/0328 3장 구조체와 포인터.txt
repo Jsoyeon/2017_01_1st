@@ -1,0 +1,89 @@
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#pragma warning (disable:4996)
+
+/*
+struct Example{
+	int number;
+	char name[10];
+};
+
+void main()
+{
+	struct Example *p;
+
+	p=(struct Example *)malloc(2*sizeof(struct Example));
+	if(p==NULL){
+		fprintf(stderr, "can't allocate memory\n");
+		exit(1);
+	}
+	p->number=1;
+	strcpy(p->name,"Park");
+	(p+1)->number=2;
+	strcpy((p+1)->name, "Kim");
+	free(p);
+}
+
+
+
+#define ROWS 3
+#define COLS 3
+
+void sparse_matrix_add1 (int A[ROWS][COLS], int B[ROWS][COLS], int C[ROWS][COLS])
+{
+	int r, c;
+	for(r=0; r<ROWS; r++)
+	{
+		for(c=0; c<COLS; c++)
+		{
+			C[r][c] = A[r][c] + B[r][c];
+			printf("%2d ", C[r][c]);
+		}
+		printf("\n");
+	}
+}
+main()
+{
+	
+	int array1[ROWS][COLS] = {{2, 3, 0}, {1,3,2}, {8, 8, 1}};
+	int array2[ROWS][COLS] = {{1, 1, 1}, {0,8,7}, {0, 2, 0}};
+	int array3[ROWS][COLS];
+	sparse_matrix_add1(array1, array2, array3);
+	
+	
+}
+
+
+
+void swap(int *px, int *py)
+{
+	int tmp;
+	tmp = *px;
+	*px=*py;
+	*py=tmp;
+}
+
+main()
+{
+	int a=1, b=2;
+	printf("swap을 호출하기 전: a=%d, b=%d \n", a, b);
+	swap(&a, &b);
+	printf("swap을 호출한 다음: a=%d, b=%d \n", a, b);
+}
+
+*/
+
+main()
+{
+	struct{
+		int i;
+		float f;
+	}s, *ps;
+	ps=&s;
+	ps->i = 2;
+	ps->f = 3.14;
+
+	printf("출력 : %d %f \n", ps->i, ps->f);
+}

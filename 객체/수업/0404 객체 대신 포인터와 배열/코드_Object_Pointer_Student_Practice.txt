@@ -1,0 +1,26 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+class Student {
+private:
+	int no;
+	string name;
+
+public:
+	Student(int n, string na){ no=n; name=na; }
+	int getNo() { return no; }
+	string getName() { return name; }
+
+	//void setData(int n, string na)  {no=n;  name=na;}
+};
+
+int main() {
+
+	 Student S1(123, "jasmine");
+	 cout<<"My student number is "<<S1.getNo()<<endl;
+	 cout<<"MY name is "<<S1.getName()<<endl;
+
+
+return 0;
+}

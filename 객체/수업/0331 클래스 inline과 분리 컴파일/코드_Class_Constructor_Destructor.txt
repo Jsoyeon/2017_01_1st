@@ -1,0 +1,44 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Student   //클래스 선언
+{
+  private:
+      int no;      //member variable(멤버 변수)
+      string name;
+  public:
+     Student() {}   //기본 생성자_default constructor   S3를 위해
+    ~Student()     //소멸자 destructor 
+	   { cout<<this->name<<"의 이름을 가진 객체가 소멸됩니다."<<endl;}  
+     Student(int n,string na)  //사용자 정의 생성자  S1과 S2를 위해
+        {   no = n;	name = na;  }  
+
+ void setNum(int n)   //member function
+        {  no = n; }
+ void setName(string na)
+        { name = na; }
+ int getNo()
+       { return no; }
+ string getName()
+       {  return name; }
+};
+
+int main()     //메인 시작
+ {  
+	 Student S1(123,"TDK");  
+       cout<<"My school number is "<<S1.getNo()<<endl;
+       cout<<"My name is "<<S1.getName()<<endl;
+
+    Student S2(456,"Candy");
+       cout<<"My school number is "<<S2.getNo()<<endl;
+	   cout<<"My name is "<<S2.getName()<<endl;
+
+    Student S3; 
+      S3.setNum(789);
+      S3.setName("Anne");
+        cout<<"My school number is "<<S3.getNo()<<endl;
+        cout<<"My name is "<<S3.getName()<<endl;
+
+	return 0;
+}
